@@ -32,4 +32,10 @@ public class EnterCodePage {
         WebElement confirmButton = appiumDriver.findElement(By.xpath("//android.widget.Button[contains(@resource-id,'confirmCodeBtnSubmit')]"));
         confirmButton.click();
     }
+
+    public void hideKeyBoard()
+    {
+        try{appiumDriver.hideKeyboard();}
+        catch(Exception e){}
+    }
 }

@@ -39,4 +39,12 @@ public class ChatDetailsPage {
         backButton.click();
         return this;
     }
+
+    public ChatDetailsPage checkChatDetailsIsDisplayed() {
+        WebElement emptyChatImage = appiumDriver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'chatDetailsEmptyChatImg')]"));
+        emptyChatImage.isDisplayed();
+        return this;
+
+
+    }
 }

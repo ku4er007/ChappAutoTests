@@ -50,6 +50,20 @@ public class StartPage {
         tutorialTitle.isDisplayed();
         return this;
     }
+
+    public void hideKeyBoard()
+    {
+        try{appiumDriver.hideKeyboard();}
+        catch(Exception e){}
+    }
+
+//    public StartPage minimizeKeyboard() {
+//        WebElement okButtonOnKeyboard = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'tvSlideTitle')]"));
+//        okButtonOnKeyboard.click();
+//        return this;
+//
+//
+//    }
 }
 
 
