@@ -55,9 +55,9 @@ public class ChatListPage extends BaseTestClass  {
         return chatPagePlaceHolder.isDisplayed();
     }
 
-    public ChatListPage navigate() {
-        ((AndroidDriver) appiumDriver).startActivity(new Activity("o.chappme.chapp.android", "o.chappme.chapp.android.ui.main.chats.list.ChatlistFragment"));
-        return this;
-
-    }
+//    public ChatListPage navigate() {
+//        ((AndroidDriver) appiumDriver).startActivity(new Activity("o.chappme.chapp.android", "o.chappme.chapp.android.ui.main.chats.list.ChatlistFragment"));
+//        return this;
+//
+//    }
 }

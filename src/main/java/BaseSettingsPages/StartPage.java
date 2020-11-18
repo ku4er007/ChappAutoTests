@@ -45,25 +45,16 @@ public class StartPage extends BaseTestClass  {
         return this;
     }
 
-    public StartPage findTutorialTitle() {
-        WebElement tutorialTitle = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'tvSlideTitle')]"));
-        tutorialTitle.isDisplayed();
-        return this;
-    }
-
     public void hideKeyBoard()
     {
         try{appiumDriver.hideKeyboard();}
         catch(Exception e){}
     }
+    public boolean findTutorialTitle() {
+        WebElement chatPagePlaceHolder = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'tvSlideTitle')]"));
+        return chatPagePlaceHolder.isDisplayed();
+    }
 
-//    public StartPage minimizeKeyboard() {
-//        WebElement okButtonOnKeyboard = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'tvSlideTitle')]"));
-//        okButtonOnKeyboard.click();
-//        return this;
-//
-//
-//    }
 }
 
 
