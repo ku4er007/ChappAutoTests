@@ -1,5 +1,9 @@
 package BaseSettingsPages;
 
+import ChatListPages.ChatListPage;
+import ChatListPages.TutorialScreen;
+import OnboardingPages.*;
+import ProfilePages.AccountManagementPage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;

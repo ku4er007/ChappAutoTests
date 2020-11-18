@@ -1,12 +1,13 @@
-package BaseSettingsPages;
+package ChatListPages;
 
+import BaseSettingsPages.BaseTestClass;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class TutorialScreen extends BaseTestClass  {
+public class TutorialScreen extends BaseTestClass {
     public TutorialScreen(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
     }

@@ -1,12 +1,13 @@
-package BaseSettingsPages;
+package OnboardingPages;
 
+import BaseSettingsPages.BaseTestClass;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class SelectCountryPage extends BaseTestClass  {
+public class SelectCountryPage extends BaseTestClass {
 
     public SelectCountryPage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;

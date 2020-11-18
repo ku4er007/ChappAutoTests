@@ -1,12 +1,13 @@
-package BaseSettingsPages;
+package ContactsPages;
 
+import BaseSettingsPages.BaseTestClass;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class ContactsPage extends BaseTestClass  {
+public class ContactsPage extends BaseTestClass {
     public ContactsPage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
     }

@@ -1,5 +1,6 @@
-package BaseSettingsPages;
+package OnboardingPages;
 
+import BaseSettingsPages.BaseTestClass;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
@@ -9,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class EnterCodePage extends BaseTestClass  {
+public class EnterCodePage extends BaseTestClass {
     public EnterCodePage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
 

@@ -1,5 +1,13 @@
 package BaseSettingsPages;
 
+import BottomBarElements.BottomBar;
+import ChatListPages.ChatDetailsPage;
+import ChatListPages.ChatListPage;
+import ChatListPages.TutorialScreen;
+import ContactsPages.ContactsPage;
+import OnboardingPages.*;
+import ProfilePages.AccountManagementPage;
+import ProfilePages.ProfilePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
