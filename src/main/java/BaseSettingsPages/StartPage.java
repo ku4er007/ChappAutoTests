@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class StartPage {
+public class StartPage extends BaseTestClass  {
     public StartPage(AppiumDriver appiumDriver){
         this.appiumDriver = appiumDriver;
 

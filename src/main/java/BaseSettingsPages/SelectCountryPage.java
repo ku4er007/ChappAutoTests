@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class SelectCountryPage {
+public class SelectCountryPage extends BaseTestClass  {
 
     public SelectCountryPage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;

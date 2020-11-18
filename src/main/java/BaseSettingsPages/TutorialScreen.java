@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class TutorialScreen {
+public class TutorialScreen extends BaseTestClass  {
     public TutorialScreen(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
     }

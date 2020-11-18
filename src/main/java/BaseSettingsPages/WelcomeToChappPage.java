@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class WelcomeToChappPage {
+public class WelcomeToChappPage extends BaseTestClass {
     public WelcomeToChappPage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
     }

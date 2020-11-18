@@ -1,12 +1,14 @@
 package BaseSettingsPages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.Activity;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class ChatListPage {
+public class ChatListPage extends BaseTestClass  {
     public ChatListPage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
 
@@ -46,5 +48,16 @@ public class ChatListPage {
         WebElement createdChatEntity = appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout"));
         createdChatEntity.isDisplayed();
         return this;
+    }
+
+    public boolean checkIsPageLoad() {
+        WebElement chatPagePlaceHolder = appiumDriver.findElement(By.xpath("//android.view.ViewGroup[contains(@resource-id,'chatsPlaceHolder')]"));
+        return chatPagePlaceHolder.isDisplayed();
+    }
+
+    public ChatListPage navigate() {
+        ((AndroidDriver) appiumDriver).startActivity(new Activity("o.chappme.chapp.android", "o.chappme.chapp.android.ui.main.chats.list.ChatlistFragment"));
+        return this;
+
     }
 }

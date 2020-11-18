@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class ChatDetailsPage {
+public class ChatDetailsPage  extends BaseTestClass {
     public ChatDetailsPage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
     }

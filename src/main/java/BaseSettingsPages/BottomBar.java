@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class BottomBar {
+public class BottomBar extends BaseTestClass  {
     public BottomBar(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
     }

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class CreateWorkProfileForm {
+public class CreateWorkProfileForm extends BaseTestClass  {
 
     public CreateWorkProfileForm(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;

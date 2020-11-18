@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class ProfilePage {
+public class ProfilePage extends BaseTestClass  {
     public ProfilePage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
     }

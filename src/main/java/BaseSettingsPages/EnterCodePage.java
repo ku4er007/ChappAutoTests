@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class EnterCodePage {
+public class EnterCodePage extends BaseTestClass  {
     public EnterCodePage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
 
