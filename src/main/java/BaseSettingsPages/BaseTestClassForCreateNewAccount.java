@@ -33,8 +33,8 @@ public class BaseTestClassForCreateNewAccount {
     @BeforeClass
     public void setup() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "sdk_gphone_x86");
-        capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3a XL");
+        capabilities.setCapability(MobileCapabilityType.UDID, "92TAX02Z0Z");
         URL serverAddress = new URL("http://0.0.0.0:4723/wd/hub");
 
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 200);

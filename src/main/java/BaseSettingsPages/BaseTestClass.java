@@ -7,6 +7,7 @@ import ChatListPages.TutorialScreen;
 import ContactsPages.ContactsPage;
 import OnboardingPages.*;
 import ProfilePages.AccountManagementPage;
+import ProfilePages.EditPersonalProfile;
 import ProfilePages.ProfilePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -28,6 +29,7 @@ public abstract class BaseTestClass {
     public StartPage startPage;
     public ChatDetailsPage chatDetailsPage;
     public ProfilePage profilePage;
+    public EditPersonalProfile editPersonalProfile;
     public ChatListPage chatListPage;
     public CreatePersonalProfileForm createPersonalProfileForm;
     public WelcomeToChappPage welcomeToChappPage;
@@ -38,8 +40,8 @@ public abstract class BaseTestClass {
     @BeforeClass
     public void setup() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "sdk_gphone_x86");
-        capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3a XL");
+        capabilities.setCapability(MobileCapabilityType.UDID, "92TAX02Z0Z");
         URL serverAddress = new URL("http://0.0.0.0:4723/wd/hub");
 
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 200);
@@ -57,6 +59,7 @@ public abstract class BaseTestClass {
         startPage = new StartPage(appiumDriver);
         chatDetailsPage = new ChatDetailsPage(appiumDriver);
         profilePage = new ProfilePage(appiumDriver);
+        editPersonalProfile = new EditPersonalProfile(appiumDriver);
         chatListPage = new ChatListPage(appiumDriver);
         createPersonalProfileForm = new CreatePersonalProfileForm(appiumDriver);
         welcomeToChappPage = new WelcomeToChappPage(appiumDriver);
@@ -79,7 +82,7 @@ public abstract class BaseTestClass {
         startPage.waitForPageLoad();
         enterCodePage.enterSmsCode();
         enterCodePage.waitForPageLoad();
-        enterCodePage.hideKeyBoard();
+//        enterCodePage.hideKeyBoard();
         enterCodePage.clickOnConfirmButton();
         tutorialScreen.clickOnOKButtonOnAlert();
         tutorialScreen.clickAllowContactButton();
