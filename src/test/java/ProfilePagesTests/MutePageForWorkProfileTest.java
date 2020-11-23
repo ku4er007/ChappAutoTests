@@ -29,8 +29,5 @@ public class MutePageForWorkProfileTest extends BaseTestClass {
         profilePage.checkOffMuteStatus();
         bottomBar.clickOnChatsButton();
         assertTrue(chatListPage.checkIsPageLoad());
-
-
-
     }
 }
