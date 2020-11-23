@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-public class DeleteAccountTest extends BaseTestClass {
+public class AccountManagementDeleteAccount extends BaseTestClass {
 
     @Test
     public void deleteAccountTest() {

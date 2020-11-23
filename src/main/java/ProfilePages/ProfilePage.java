@@ -156,4 +156,40 @@ public class ProfilePage extends BaseTestClass {
         infoButton.click();
         return this;
     }
+
+    public boolean checkPersonalProfileInfo() {
+        WebElement personalProfileInfo = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[contains(@resource-id,'profileTopContainer')]"));
+        return personalProfileInfo.isDisplayed();
+    }
+
+    public boolean checkPhoneManagementSection() {
+        WebElement phoneManagementSection = appiumDriver.findElement(By.xpath("//android.widget.RelativeLayout[contains(@resource-id,'profilePhones')]"));
+        return phoneManagementSection.isDisplayed();
+    }
+
+    public boolean checkMuteProfileSection() {
+        WebElement muteProfileSection = appiumDriver.findElement(By.xpath("//android.widget.RelativeLayout[contains(@resource-id,'profileMute')]"));
+        return muteProfileSection.isDisplayed();
+    }
+
+    public boolean checkAccountManagementSection() {
+        WebElement accountManagementSection = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'profileAccountSection')]"));
+        return accountManagementSection.isDisplayed();
+    }
+
+    public boolean checkFeedbackSection() {
+        WebElement feedbackSection = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'profileFeedbackSection')]"));
+        return feedbackSection.isDisplayed();
+    }
+
+    public boolean checkTermsAndPolicySection() {
+        WebElement termsAndPolicySection = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'profileTermsSection')]"));
+        return termsAndPolicySection.isDisplayed();
+    }
+
+    public boolean checkInfoSection() {
+        WebElement termsAndPolicySection = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'profileInfoSection')]"));
+        return termsAndPolicySection.isDisplayed();
+
+    }
 }
