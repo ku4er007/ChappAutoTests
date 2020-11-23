@@ -13,80 +13,66 @@ public class MutePageForPersonalProfileTest extends BaseTestClass {
         bottomBar.clickOnProfileButton();
         profilePage.checkOffMuteStatus();
         profilePage.clickOnMuteProfileButton();
-        mutePersonalProfilePage.checkPageTitle();
-        mutePersonalProfilePage.clickOnActivationMuteSwitcher();
-        mutePersonalProfilePage.clickOnDoneButton();
-        mutePersonalProfilePage.checkSuccessAlert();
-        mutePersonalProfilePage.clickOnBackButton();
+        muteProfilePage.checkPageTitle();
+        muteProfilePage.clickOnActivationMuteSwitcher();
+        muteProfilePage.clickOnDoneButton();
+        muteProfilePage.checkSuccessAlert();
+        muteProfilePage.clickOnBackButton();
         profilePage.checkOnMuteStatus();
         profilePage.checkMuteIconOnPersonalTab();
         profilePage.clickOnMuteProfileButton();
-        mutePersonalProfilePage.clickOnActivationMuteSwitcher();
-        mutePersonalProfilePage.clickOnDoneButton();
-        mutePersonalProfilePage.checkSuccessAlert();
-        mutePersonalProfilePage.clickOnBackButton();
+        muteProfilePage.clickOnActivationMuteSwitcher();
+        muteProfilePage.clickOnDoneButton();
+        muteProfilePage.checkSuccessAlert();
+        muteProfilePage.clickOnBackButton();
         profilePage.checkOffMuteStatus();
         bottomBar.clickOnChatsButton();
         assertTrue(chatListPage.checkIsPageLoad());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void setMuteSchedulePageForPersonalProfile() {
         assertTrue(chatListPage.checkIsPageLoad());
         bottomBar.clickOnProfileButton();
         profilePage.checkOffMuteStatus();
         profilePage.clickOnMuteProfileButton();
-        mutePersonalProfilePage.checkPageTitle();
-        mutePersonalProfilePage.clickOnSetMuteScheduleSwitcher();
-        mutePersonalProfilePage.clickOnStartTimeSection();
-        mutePersonalProfilePage.clickOnKeyboardTimeButton();
-        mutePersonalProfilePage.enterStartHourData();
-        mutePersonalProfilePage.enterStartMinuteData();
-        mutePersonalProfilePage.clickOnOkButton();
-        mutePersonalProfilePage.clickOnEndTimeSection();
-        mutePersonalProfilePage.clickOnKeyboardTimeButton();
-        mutePersonalProfilePage.enterEndHourData();
-        mutePersonalProfilePage.enterEndMinuteData();
-        mutePersonalProfilePage.clickOnOkButton();
-        mutePersonalProfilePage.clickOnActivationMuteSwitcher();
-        mutePersonalProfilePage.clickOnRepeatButton();
-        mutePersonalProfilePage.selectMonday();
-        mutePersonalProfilePage.selectTuesday();
-        mutePersonalProfilePage.selectFriday();
-        mutePersonalProfilePage.selectSunday();
-        mutePersonalProfilePage.clickOnOkButton();
-        mutePersonalProfilePage.checkSelectedRepeatsDays();
-        mutePersonalProfilePage.clickOnDoneButton();
-        mutePersonalProfilePage.checkSuccessAlert();
-        mutePersonalProfilePage.clickOnBackButton();
+        muteProfilePage.checkPageTitle();
+        muteProfilePage.clickOnSetMuteScheduleSwitcher();
+        muteProfilePage.clickOnStartTimeSection();
+        muteProfilePage.clickOnKeyboardTimeButton();
+        muteProfilePage.enterStartHourData();
+        muteProfilePage.enterStartMinuteData();
+        muteProfilePage.clickOnOkButton();
+        muteProfilePage.clickOnEndTimeSection();
+        muteProfilePage.clickOnKeyboardTimeButton();
+        muteProfilePage.enterEndHourData();
+        muteProfilePage.enterEndMinuteData();
+        muteProfilePage.clickOnOkButton();
+        muteProfilePage.clickOnActivationMuteSwitcher();
+        muteProfilePage.clickOnRepeatButton();
+        muteProfilePage.selectMonday();
+        muteProfilePage.selectTuesday();
+        muteProfilePage.selectFriday();
+        muteProfilePage.selectSunday();
+        muteProfilePage.clickOnOkButton();
+        muteProfilePage.checkSelectedRepeatsDays();
+        muteProfilePage.clickOnDoneButton();
+        muteProfilePage.checkSuccessAlert();
+        muteProfilePage.clickOnBackButton();
         profilePage.checkOffMuteStatus();
         profilePage.checkScheduleIcon();
         profilePage.clickOnMuteProfileButton();
-        mutePersonalProfilePage.clickOnRepeatButton();
-        mutePersonalProfilePage.selectMonday();
-        mutePersonalProfilePage.selectTuesday();
-        mutePersonalProfilePage.selectFriday();
-        mutePersonalProfilePage.selectSunday();
-        mutePersonalProfilePage.clickOnOkButton();
-        mutePersonalProfilePage.clickOnSetMuteScheduleSwitcher();
-        mutePersonalProfilePage.clickOnDoneButton();
-        mutePersonalProfilePage.clickOnBackButton();
+        muteProfilePage.clickOnRepeatButton();
+        muteProfilePage.selectMonday();
+        muteProfilePage.selectTuesday();
+        muteProfilePage.selectFriday();
+        muteProfilePage.selectSunday();
+        muteProfilePage.clickOnOkButton();
+        muteProfilePage.clickOnSetMuteScheduleSwitcher();
+        muteProfilePage.clickOnDoneButton();
+        muteProfilePage.clickOnBackButton();
         bottomBar.clickOnChatsButton();
         assertTrue(chatListPage.checkIsPageLoad());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

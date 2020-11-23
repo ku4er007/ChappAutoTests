@@ -34,7 +34,7 @@ public abstract class BaseTestClass {
     public WelcomeToChappPage welcomeToChappPage;
     public CreateWorkProfileForm createWorkProfileForm;
     public AccountManagementPage accountManagementPage;
-    public MutePersonalProfilePage mutePersonalProfilePage;
+    public MuteProfilePage muteProfilePage;
     public MuteWorkProfilePage muteWorkProfilePage;
     public InfoTutorialPages infoTutorialPages;
 
@@ -69,7 +69,7 @@ public abstract class BaseTestClass {
         welcomeToChappPage = new WelcomeToChappPage(appiumDriver);
         createWorkProfileForm = new CreateWorkProfileForm(appiumDriver);
         accountManagementPage = new AccountManagementPage(appiumDriver);
-        mutePersonalProfilePage = new MutePersonalProfilePage(appiumDriver);
+        muteProfilePage = new MuteProfilePage(appiumDriver);
         muteWorkProfilePage = new MuteWorkProfilePage(appiumDriver);
         infoTutorialPages = new InfoTutorialPages(appiumDriver);
 
