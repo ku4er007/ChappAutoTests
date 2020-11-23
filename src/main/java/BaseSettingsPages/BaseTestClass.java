@@ -36,6 +36,7 @@ public abstract class BaseTestClass {
     public AccountManagementPage accountManagementPage;
     public MutePersonalProfilePage mutePersonalProfilePage;
     public MuteWorkProfilePage muteWorkProfilePage;
+    public InfoTutorialPages infoTutorialPages;
 
 
 
@@ -70,6 +71,7 @@ public abstract class BaseTestClass {
         accountManagementPage = new AccountManagementPage(appiumDriver);
         mutePersonalProfilePage = new MutePersonalProfilePage(appiumDriver);
         muteWorkProfilePage = new MuteWorkProfilePage(appiumDriver);
+        infoTutorialPages = new InfoTutorialPages(appiumDriver);
 
 
         //login app process for all tests

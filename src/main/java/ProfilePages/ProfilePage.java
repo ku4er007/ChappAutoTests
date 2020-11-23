@@ -119,4 +119,41 @@ public class ProfilePage extends BaseTestClass {
         WebElement muteIcon = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView"));
         return muteIcon.isDisplayed();
     }
+
+    public ProfilePage clickOnFeedbackButton() {
+        WebElement feedbackButton = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'profileFeedbackSection')]"));
+        feedbackButton.click();
+        return this;
+
+    }
+
+    public boolean checkMailTitle() {
+        WebElement mailTitle = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Написать')]"));
+        return mailTitle.isDisplayed();
+    }
+
+    public ProfilePage enterMessageTheme() {
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'subject')]")).sendKeys("Test theme");
+        return this;
+
+    }
+
+    public ProfilePage enterTextMessage() {
+        appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.widget.EditText")).sendKeys("Test message description");
+        return this;
+
+    }
+
+    public ProfilePage clickOnSendButton() {
+        WebElement sendMailButton = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'send')]"));
+        sendMailButton.click();
+        return this;
+
+    }
+
+    public ProfilePage clickOnInfoButton() {
+        WebElement infoButton = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'profileInfoSection')]"));
+        infoButton.click();
+        return this;
+    }
 }
