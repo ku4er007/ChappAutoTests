@@ -6,10 +6,7 @@ import ChatListPages.ChatListPage;
 import ChatListPages.TutorialScreen;
 import ContactsPages.ContactsPage;
 import OnboardingPages.*;
-import ProfilePages.AccountManagementPage;
-import ProfilePages.EditPersonalProfile;
-import ProfilePages.EditWorkProfile;
-import ProfilePages.ProfilePage;
+import ProfilePages.*;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -37,6 +34,9 @@ public abstract class BaseTestClass {
     public WelcomeToChappPage welcomeToChappPage;
     public CreateWorkProfileForm createWorkProfileForm;
     public AccountManagementPage accountManagementPage;
+    public MutePersonalProfilePage mutePersonalProfilePage;
+    public MuteWorkProfilePage muteWorkProfilePage;
+
 
 
     @BeforeClass
@@ -68,6 +68,9 @@ public abstract class BaseTestClass {
         welcomeToChappPage = new WelcomeToChappPage(appiumDriver);
         createWorkProfileForm = new CreateWorkProfileForm(appiumDriver);
         accountManagementPage = new AccountManagementPage(appiumDriver);
+        mutePersonalProfilePage = new MutePersonalProfilePage(appiumDriver);
+        muteWorkProfilePage = new MuteWorkProfilePage(appiumDriver);
+
 
         //login app process for all tests
         startPage.clickOnStartMessagingButton();
@@ -92,4 +95,5 @@ public abstract class BaseTestClass {
         tutorialScreen.closedTutorialButton();
         tutorialScreen.waitForPageLoad();
     }
+
 }

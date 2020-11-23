@@ -92,4 +92,31 @@ public class ProfilePage extends BaseTestClass {
         return profilePageTitle.isDisplayed();
 
     }
+
+    public ProfilePage clickOnMuteProfileButton() {
+        WebElement muteProfileButton = appiumDriver.findElement(By.xpath("//android.widget.RelativeLayout[contains(@resource-id,'profileMute')]"));
+        muteProfileButton.click();
+        return this;
+
+    }
+
+    public boolean checkOffMuteStatus() {
+        WebElement offMuteStatus = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'OFF')]"));
+        return offMuteStatus.isDisplayed();
+    }
+
+    public boolean checkOnMuteStatus() {
+        WebElement onMuteStatus = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'ON')]"));
+        return onMuteStatus.isDisplayed();
+
+    }
+
+    public boolean checkMuteIconOnPersonalTab() {
+        WebElement muteIcon = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView"));
+        return muteIcon.isDisplayed();
+    }
+    public boolean checkMuteIconOnWorkTab() {
+        WebElement muteIcon = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView"));
+        return muteIcon.isDisplayed();
+    }
 }
