@@ -1,3 +1,5 @@
+package ProfilePagesTests;
+
 import BaseSettingsPages.BaseTestClass;
 import org.testng.annotations.Test;
 

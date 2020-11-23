@@ -8,6 +8,7 @@ import ContactsPages.ContactsPage;
 import OnboardingPages.*;
 import ProfilePages.AccountManagementPage;
 import ProfilePages.EditPersonalProfile;
+import ProfilePages.EditWorkProfile;
 import ProfilePages.ProfilePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -30,6 +31,7 @@ public abstract class BaseTestClass {
     public ChatDetailsPage chatDetailsPage;
     public ProfilePage profilePage;
     public EditPersonalProfile editPersonalProfile;
+    public EditWorkProfile editWorkProfile;
     public ChatListPage chatListPage;
     public CreatePersonalProfileForm createPersonalProfileForm;
     public WelcomeToChappPage welcomeToChappPage;
@@ -60,6 +62,7 @@ public abstract class BaseTestClass {
         chatDetailsPage = new ChatDetailsPage(appiumDriver);
         profilePage = new ProfilePage(appiumDriver);
         editPersonalProfile = new EditPersonalProfile(appiumDriver);
+        editWorkProfile = new EditWorkProfile(appiumDriver);
         chatListPage = new ChatListPage(appiumDriver);
         createPersonalProfileForm = new CreatePersonalProfileForm(appiumDriver);
         welcomeToChappPage = new WelcomeToChappPage(appiumDriver);

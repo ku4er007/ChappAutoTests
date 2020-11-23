@@ -1,3 +1,5 @@
+package ProfilePagesTests;
+
 import BaseSettingsPages.BaseTestClass;
 import org.testng.annotations.Test;
 
@@ -5,11 +7,11 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class EditPersonalProfileTests extends BaseTestClass {
 
-    @Test
+    @Test(priority=1)
     public void editPersonalProfileWithEditAllFieldsTest(){
         assertTrue(chatListPage.checkIsPageLoad());
         bottomBar.clickOnProfileButton();
-        profilePage.goToEditPersonalProfileForm();
+        profilePage.goToEditProfileForm();
         editPersonalProfile.checkEditPageTitle();
         editPersonalProfile.changeFirstName();
         editPersonalProfile.changeLastName();
@@ -26,11 +28,11 @@ public class EditPersonalProfileTests extends BaseTestClass {
         bottomBar.clickOnChatsButton();
         assertTrue(chatListPage.checkIsPageLoad());
     }
-    @Test
+    @Test(priority=2)
     public void editPersonalProfileWithEmptyFirstName(){
         assertTrue(chatListPage.checkIsPageLoad());
         bottomBar.clickOnProfileButton();
-        profilePage.goToEditPersonalProfileForm();
+        profilePage.goToEditProfileForm();
         editPersonalProfile.checkEditPageTitle();
         editPersonalProfile.clearFirstNameInputField();
         editPersonalProfile.checkValidationMessage();
@@ -39,11 +41,11 @@ public class EditPersonalProfileTests extends BaseTestClass {
         assertTrue(chatListPage.checkIsPageLoad());
 
     }
-    @Test
+    @Test(priority=3)
     public void editPersonalProfileWithEmptyLastName(){
         assertTrue(chatListPage.checkIsPageLoad());
         bottomBar.clickOnProfileButton();
-        profilePage.goToEditPersonalProfileForm();
+        profilePage.goToEditProfileForm();
         editPersonalProfile.checkEditPageTitle();
         editPersonalProfile.clearLastNameInputField();
         editPersonalProfile.clickOnSaveButton();
@@ -52,12 +54,12 @@ public class EditPersonalProfileTests extends BaseTestClass {
         assertTrue(chatListPage.checkIsPageLoad());
 
     }
-    @Test
+    @Test(priority=4)
     public void editPersonalProfileWithAddPhotoUsingCamera() {
         assertTrue(chatListPage.checkIsPageLoad());
         bottomBar.clickOnProfileButton();
         profilePage.waitForPageLoad();
-        profilePage.goToEditPersonalProfileForm();
+        profilePage.goToEditProfileForm();
         editPersonalProfile.checkEditPageTitle();
         editPersonalProfile.addProfilePhoto();
         editPersonalProfile.clickOnAllowPermissionPhotoButton();
