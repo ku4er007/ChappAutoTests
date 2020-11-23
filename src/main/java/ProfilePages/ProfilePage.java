@@ -192,4 +192,10 @@ public class ProfilePage extends BaseTestClass {
         return termsAndPolicySection.isDisplayed();
 
     }
+
+    public boolean checkScheduleIcon() {
+        WebElement muteScheduleIcon = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Mute Profile')]"));
+        return muteScheduleIcon.isDisplayed();
+
+    }
 }
