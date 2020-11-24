@@ -20,7 +20,7 @@ public class ChatListPage extends BaseTestClass {
     }
 
     public ChatListPage clickOnCreateNewChatButton() {
-        WebElement createNewChatButton = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'newChat')]"));
+        WebElement createNewChatButton = appiumDriver.findElement(By.xpath("//android.widget.Button[contains(@resource-id,'placeholderActionButton')]"));
         createNewChatButton.click();
         return this;
     }
@@ -44,7 +44,7 @@ public class ChatListPage extends BaseTestClass {
     }
 
     public ChatListPage checkCreatedChat() {
-        WebElement createdChatEntity = appiumDriver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout"));
+        WebElement createdChatEntity = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Artem5')]"));
         createdChatEntity.isDisplayed();
         return this;
     }
@@ -52,6 +52,11 @@ public class ChatListPage extends BaseTestClass {
     public boolean checkIsPageLoad() {
         WebElement chatPagePlaceHolder = appiumDriver.findElement(By.xpath("//android.view.ViewGroup[contains(@resource-id,'chatsPlaceHolder')]"));
         return chatPagePlaceHolder.isDisplayed();
+    }
+
+    public boolean checkChatsPageTitle(){
+        WebElement chatPageTitle = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Chats')]"));
+        return chatPageTitle.isDisplayed();
     }
 
     public boolean checkMuteIconOnWorkTab() {
@@ -74,6 +79,43 @@ public class ChatListPage extends BaseTestClass {
     public boolean checkMuteIconOnPersonalTab() {
         WebElement muteIconOnPersonalInChatsPage = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView\n"));
         return muteIconOnPersonalInChatsPage.isDisplayed();
+    }
+
+    public ChatListPage clickOnCreateNewChatInHeader() {
+        WebElement createNewChatButtonInHeader = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'newChat')]"));
+        createNewChatButtonInHeader.click();
+        return this;
+    }
+
+    public ChatListPage clickOnChappContactForChatting() {
+        WebElement firstChappContact = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Artem5')]"));
+        firstChappContact.click();
+        return this;
+
+    }
+
+    public ChatListPage clickOnWorkTab() {
+        WebElement workTab = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'WORK')]"));
+        workTab.click();
+        return this;
+    }
+
+    public ChatListPage clickOnChappWorkContactForChatting() {
+        WebElement workChappContact = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Artem5')]"));
+        workChappContact.click();
+        return this;
+    }
+
+    public ChatListPage clickOnNewGroupButton() {
+        WebElement newGroupButton = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'pickContactNewGroupTv')]"));
+        newGroupButton.click();
+        return this;
+    }
+
+    public boolean checkCreatedNewGroup() {
+        WebElement createdGroup = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'groupPreviewName')]"));
+        return createdGroup.isDisplayed();
+
     }
 
 //    public ChatListPage navigate() {

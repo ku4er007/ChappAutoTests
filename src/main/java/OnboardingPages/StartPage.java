@@ -1,6 +1,7 @@
 package OnboardingPages;
 import BaseSettingsPages.BaseTestClass;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -55,7 +56,6 @@ public class StartPage extends BaseTestClass {
         WebElement chatPagePlaceHolder = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'tvSlideTitle')]"));
         return chatPagePlaceHolder.isDisplayed();
     }
-
 }
 
 

@@ -25,7 +25,7 @@ public class ChatDetailsPage  extends BaseTestClass {
     }
 
     public ChatDetailsPage enterMessage() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'chatDetailsEditText')]")).sendKeys("first Message text");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'chatDetailsEditText')]")).sendKeys("first Message text TEST TEST tEST");
         return this;
     }
 
@@ -41,11 +41,33 @@ public class ChatDetailsPage  extends BaseTestClass {
         return this;
     }
 
-    public ChatDetailsPage checkChatDetailsIsDisplayed() {
+    public ChatDetailsPage checkEmptyChatDetailsIsDisplayed() {
         WebElement emptyChatImage = appiumDriver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'chatDetailsEmptyChatImg')]"));
         emptyChatImage.isDisplayed();
         return this;
 
+
+    }
+
+    public boolean checkSystemMessageInChat() {
+        WebElement systemMessageInChatDetails = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'chatNotificationItemText')]"));
+        return systemMessageInChatDetails.isDisplayed();
+
+    }
+
+    public boolean checkSendedMessageIsDisplayed() {
+        WebElement sendMessageInChatDetails = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'first Message text TEST TEST tEST')]"));
+        return sendMessageInChatDetails.isDisplayed();
+    }
+
+    public ChatDetailsPage enterWorkMessage() {
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'chatDetailsEditText')]")).sendKeys("Work Work Work Work Work Message");
+        return this;
+    }
+
+    public boolean checkSendedWorkMessageIsDisplayed() {
+        WebElement sendWorkMessageInChatDetails = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Work Work Work Work Work Message')]"));
+        return sendWorkMessageInChatDetails.isDisplayed();
 
     }
 }

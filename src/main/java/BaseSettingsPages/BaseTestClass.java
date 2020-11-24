@@ -3,6 +3,7 @@ package BaseSettingsPages;
 import BottomBarElements.BottomBar;
 import ChatListPages.ChatDetailsPage;
 import ChatListPages.ChatListPage;
+import ChatListPages.GroupChat;
 import ChatListPages.TutorialScreen;
 import ContactsPages.ContactsPage;
 import NotificationPages.NotificationPage;
@@ -39,6 +40,7 @@ public abstract class BaseTestClass {
     public MuteWorkProfilePage muteWorkProfilePage;
     public InfoTutorialPages infoTutorialPages;
     public NotificationPage notificationPage;
+    public GroupChat groupChat;
 
 
 
@@ -75,6 +77,7 @@ public abstract class BaseTestClass {
         muteWorkProfilePage = new MuteWorkProfilePage(appiumDriver);
         infoTutorialPages = new InfoTutorialPages(appiumDriver);
         notificationPage = new NotificationPage(appiumDriver);
+        groupChat = new GroupChat(appiumDriver);
 
 
         //login app process for all tests

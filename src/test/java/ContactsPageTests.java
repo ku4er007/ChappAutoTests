@@ -32,7 +32,7 @@ public class ContactsPageTests extends BaseTestClass {
         contactsPage.clickOnSearchButton();
         contactsPage.enterSearchQuery();
         contactsPage.checkContactDisplayedaAndClickOnIt();
-        chatDetailsPage.checkChatDetailsIsDisplayed();
+        chatDetailsPage.checkEmptyChatDetailsIsDisplayed();
     }
 
     @Test
