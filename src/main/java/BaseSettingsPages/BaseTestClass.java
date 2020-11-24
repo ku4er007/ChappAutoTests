@@ -45,8 +45,8 @@ public abstract class BaseTestClass {
     @BeforeClass
     public void setup() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Galaxy A20");
-        capabilities.setCapability(MobileCapabilityType.UDID, "R58M478CD5P");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3a XL");
+        capabilities.setCapability(MobileCapabilityType.UDID, "92TAX02Z0Z");
         URL serverAddress = new URL("http://0.0.0.0:4723/wd/hub");
 
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 200);
@@ -94,7 +94,7 @@ public abstract class BaseTestClass {
         startPage.waitForPageLoad();
         enterCodePage.enterSmsCode();
         enterCodePage.waitForPageLoad();
-        enterCodePage.hideKeyBoard();
+//        enterCodePage.hideKeyBoard();
         enterCodePage.clickOnConfirmButton();
         tutorialScreen.clickOnOKButtonOnAlert();
         tutorialScreen.clickAllowContactButton();
