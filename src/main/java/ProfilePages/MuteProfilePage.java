@@ -136,4 +136,9 @@ public class MuteProfilePage extends BaseTestClass {
         return selectedRepeatsDays.isDisplayed();
 
     }
+
+    public boolean checkNeverDays() {
+        WebElement neverDays = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'NEVER')]"));
+        return neverDays.isDisplayed();
+    }
 }

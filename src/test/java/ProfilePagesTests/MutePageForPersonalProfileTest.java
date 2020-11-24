@@ -73,6 +73,68 @@ public class MutePageForPersonalProfileTest extends BaseTestClass {
         muteProfilePage.clickOnBackButton();
         bottomBar.clickOnChatsButton();
         assertTrue(chatListPage.checkIsPageLoad());
+    }
 
+
+    @Test(priority = 3)
+    public void setMuteSchedulePageForPersonalProfileWithoutRepeatDays() {
+        assertTrue(chatListPage.checkIsPageLoad());
+        bottomBar.clickOnProfileButton();
+        profilePage.checkOffMuteStatus();
+        profilePage.clickOnMuteProfileButton();
+        muteProfilePage.checkPageTitle();
+        muteProfilePage.clickOnSetMuteScheduleSwitcher();
+        muteProfilePage.clickOnStartTimeSection();
+        muteProfilePage.clickOnKeyboardTimeButton();
+        muteProfilePage.enterStartHourData();
+        muteProfilePage.enterStartMinuteData();
+        muteProfilePage.clickOnOkButton();
+        muteProfilePage.clickOnEndTimeSection();
+        muteProfilePage.clickOnKeyboardTimeButton();
+        muteProfilePage.enterEndHourData();
+        muteProfilePage.enterEndMinuteData();
+        muteProfilePage.clickOnOkButton();
+        muteProfilePage.clickOnActivationMuteSwitcher();
+        muteProfilePage.checkNeverDays();
+        muteProfilePage.clickOnDoneButton();
+        muteProfilePage.checkSuccessAlert();
+        muteProfilePage.clickOnBackButton();
+        profilePage.checkOffMuteStatus();
+        profilePage.clickOnMuteProfileButton();
+        muteProfilePage.clickOnSetMuteScheduleSwitcher();
+        muteProfilePage.clickOnDoneButton();
+        muteProfilePage.checkSuccessAlert();
+        muteProfilePage.clickOnBackButton();
+        profilePage.checkOffMuteStatus();
+        bottomBar.clickOnChatsButton();
+        assertTrue(chatListPage.checkIsPageLoad());
+    }
+
+    @Test(priority = 4)
+    public void checkMuteIconOnAllPersonalPages() {
+        assertTrue(chatListPage.checkIsPageLoad());
+        bottomBar.clickOnProfileButton();
+        profilePage.checkOffMuteStatus();
+        profilePage.clickOnMuteProfileButton();
+        muteProfilePage.checkPageTitle();
+        muteProfilePage.clickOnActivationMuteSwitcher();
+        muteProfilePage.clickOnDoneButton();
+        muteProfilePage.checkSuccessAlert();
+        muteProfilePage.clickOnBackButton();
+        profilePage.checkOnMuteStatus();
+        profilePage.checkMuteIconOnPersonalTab();
+        bottomBar.clickOnNotificationsButton();
+        notificationPage.checkMuteIconOnPersonalTab();
+        bottomBar.clickOnContactsButton();
+        contactsPage.checkMuteIconOnPersonalTab();
+        bottomBar.clickOnChatsButton();
+        chatListPage.checkMuteIconOnPersonalTab();
+        chatListPage.checkMuteOnStatusOnChatsPage();
+        chatListPage.clickOnMuteProfileButton();
+        muteProfilePage.clickOnActivationMuteSwitcher();
+        muteProfilePage.clickOnDoneButton();
+        muteProfilePage.checkSuccessAlert();
+        muteProfilePage.clickOnBackButton();
+        assertTrue(chatListPage.checkIsPageLoad());
     }
 }

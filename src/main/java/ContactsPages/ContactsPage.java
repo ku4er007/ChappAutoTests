@@ -66,4 +66,14 @@ public class ContactsPage extends BaseTestClass {
         return this;
 
     }
+
+    public boolean checkMuteIconOnWorkTab() {
+        WebElement muteIconOnWorkInContactsPage = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView\n"));
+        return muteIconOnWorkInContactsPage.isDisplayed();
+    }
+
+    public boolean checkMuteIconOnPersonalTab() {
+        WebElement muteIconOnPersonalInContactsPage = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView\n"));
+        return muteIconOnPersonalInContactsPage.isDisplayed();
+    }
 }

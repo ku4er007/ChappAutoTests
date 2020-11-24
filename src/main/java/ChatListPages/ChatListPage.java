@@ -54,6 +54,28 @@ public class ChatListPage extends BaseTestClass {
         return chatPagePlaceHolder.isDisplayed();
     }
 
+    public boolean checkMuteIconOnWorkTab() {
+        WebElement muteIconOnWorkInChatsPage = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView\n"));
+        return muteIconOnWorkInChatsPage.isDisplayed();
+    }
+
+    public boolean checkMuteOnStatusOnChatsPage() {
+        WebElement muteIconOnWorkInChatsPage = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'ON')]"));
+        return muteIconOnWorkInChatsPage.isDisplayed();
+    }
+
+    public ChatListPage clickOnMuteProfileButton() {
+        WebElement muteProfileButtonOnChatsPage = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Mute Profile')]"));
+        muteProfileButtonOnChatsPage.click();
+        return this;
+
+    }
+
+    public boolean checkMuteIconOnPersonalTab() {
+        WebElement muteIconOnPersonalInChatsPage = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView\n"));
+        return muteIconOnPersonalInChatsPage.isDisplayed();
+    }
+
 //    public ChatListPage navigate() {
 //        ((AndroidDriver) appiumDriver).startActivity(new Activity("o.chappme.chapp.android", "o.chappme.chapp.android.ui.main.chats.list.ChatlistFragment"));
 //        return this;

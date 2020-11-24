@@ -5,6 +5,7 @@ import ChatListPages.ChatDetailsPage;
 import ChatListPages.ChatListPage;
 import ChatListPages.TutorialScreen;
 import ContactsPages.ContactsPage;
+import NotificationPages.NotificationPage;
 import OnboardingPages.*;
 import ProfilePages.*;
 import io.appium.java_client.AppiumDriver;
@@ -37,14 +38,15 @@ public abstract class BaseTestClass {
     public MuteProfilePage muteProfilePage;
     public MuteWorkProfilePage muteWorkProfilePage;
     public InfoTutorialPages infoTutorialPages;
+    public NotificationPage notificationPage;
 
 
 
     @BeforeClass
     public void setup() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3a XL");
-        capabilities.setCapability(MobileCapabilityType.UDID, "92TAX02Z0Z");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Galaxy A20");
+        capabilities.setCapability(MobileCapabilityType.UDID, "R58M478CD5P");
         URL serverAddress = new URL("http://0.0.0.0:4723/wd/hub");
 
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 200);
@@ -72,10 +74,12 @@ public abstract class BaseTestClass {
         muteProfilePage = new MuteProfilePage(appiumDriver);
         muteWorkProfilePage = new MuteWorkProfilePage(appiumDriver);
         infoTutorialPages = new InfoTutorialPages(appiumDriver);
+        notificationPage = new NotificationPage(appiumDriver);
 
 
         //login app process for all tests
         startPage.clickOnStartMessagingButton();
+        startPage.waitForPageLoad();
         startPage.clickOnSelectCountryButton();
         startPage.waitForPageLoad();
         selectCountryPage.clickOnSearchInputField();
@@ -90,7 +94,7 @@ public abstract class BaseTestClass {
         startPage.waitForPageLoad();
         enterCodePage.enterSmsCode();
         enterCodePage.waitForPageLoad();
-//        enterCodePage.hideKeyBoard();
+        enterCodePage.hideKeyBoard();
         enterCodePage.clickOnConfirmButton();
         tutorialScreen.clickOnOKButtonOnAlert();
         tutorialScreen.clickAllowContactButton();
