@@ -23,16 +23,19 @@ public class BottomBar extends BaseTestClass {
         profileButton.click();
         return this;
     }
+
     public BottomBar clickOnChatsButton() {
         WebElement chatsButton = appiumDriver.findElement(By.xpath("//android.widget.FrameLayout[contains(@resource-id,'mainBottomNavChats')]"));
         chatsButton.click();
         return this;
     }
+
     public BottomBar clickOnContactsButton() {
         WebElement contactsButton = appiumDriver.findElement(By.xpath("//android.widget.FrameLayout[contains(@resource-id,'mainBottomNavContacts')]"));
         contactsButton.click();
         return this;
     }
+
     public BottomBar clickOnNotificationsButton() {
         WebElement notificationsButton = appiumDriver.findElement(By.xpath("//android.widget.FrameLayout[contains(@resource-id,'mainBottomNavNotifications')]"));
         notificationsButton.click();

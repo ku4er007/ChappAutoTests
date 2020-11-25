@@ -20,8 +20,7 @@ import java.net.URL;
 
 public abstract class BaseTestClass {
     AppiumDriver appiumDriver;
-
-    //all app pages and elements:****************************************************************************************************
+    //all app pages and elements:***************************************************************************************
     public ContactsPage contactsPage;
     public BottomBar bottomBar;
     public TutorialScreen tutorialScreen;
@@ -42,8 +41,7 @@ public abstract class BaseTestClass {
     public InfoTutorialPages infoTutorialPages;
     public NotificationPage notificationPage;
     public GroupChat groupChat;
-
-    //Test Data:**********************************************************************************************************************
+    //All Test Data:********************************************************************************************************
     public String personalTextMessage = "first Message text TEST TEST tEST";
     public By checkPersonalTextMessage = By.xpath("//android.widget.TextView[contains(@text,'first Message text TEST TEST tEST')]");
     public String workTextMessage = "Work Work Work Work Work Message";
@@ -79,34 +77,18 @@ public abstract class BaseTestClass {
     public By friday = By.xpath("//android.widget.CheckedTextView[contains(@text,'Friday')]");
     public By sunday = By.xpath("//android.widget.CheckedTextView[contains(@text,'Sunday')]");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @BeforeClass
-
     public void setup() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3a XL");
         capabilities.setCapability(MobileCapabilityType.UDID, "92TAX02Z0Z");
         URL serverAddress = new URL("http://0.0.0.0:4723/wd/hub");
-
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 200);
         capabilities.setCapability("appPackage", "o.chappme.chapp.android");
         capabilities.setCapability("appActivity", "o.chappme.chapp.android.ui.host.HostActivity");
         capabilities.setCapability("platformName", "Android");
 
-        //all app pages/elements constructors
+        //all app pages/elements constructors***************************************************************************
         appiumDriver = new AndroidDriver(serverAddress, capabilities);
         contactsPage = new ContactsPage(appiumDriver);
         bottomBar = new BottomBar(appiumDriver);
@@ -128,9 +110,7 @@ public abstract class BaseTestClass {
         infoTutorialPages = new InfoTutorialPages(appiumDriver);
         notificationPage = new NotificationPage(appiumDriver);
         groupChat = new GroupChat(appiumDriver);
-
-
-        //login app process for all tests
+        //login app process for all tests*******************************************************************************
         startPage.clickOnStartMessagingButton();
         startPage.waitForPageLoad();
         startPage.clickOnSelectCountryButton();
@@ -147,12 +127,11 @@ public abstract class BaseTestClass {
         startPage.waitForPageLoad();
         enterCodePage.enterSmsCode();
         enterCodePage.waitForPageLoad();
-//        enterCodePage.hideKeyBoard();
+//      enterCodePage.hideKeyBoard();
         enterCodePage.clickOnConfirmButton();
         tutorialScreen.clickOnOKButtonOnAlert();
         tutorialScreen.clickAllowContactButton();
         tutorialScreen.closedTutorialButton();
         tutorialScreen.waitForPageLoad();
     }
-
 }

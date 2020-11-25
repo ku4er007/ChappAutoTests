@@ -114,6 +114,7 @@ public class ProfilePage extends BaseTestClass {
         WebElement muteIcon = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView"));
         return muteIcon.isDisplayed();
     }
+
     public boolean checkMuteIconOnWorkTab() {
         WebElement muteIcon = appiumDriver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Work\"]/android.widget.ImageView"));
         return muteIcon.isDisplayed();

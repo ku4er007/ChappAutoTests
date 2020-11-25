@@ -32,9 +32,10 @@ public class EnterCodePage extends BaseTestClassForCreateNewAccount {
         confirmButton.click();
     }
 
-    public void hideKeyBoard()
-    {
-        try{appiumDriver.hideKeyboard();}
-        catch(Exception e){}
+    public void hideKeyBoard() {
+        try {
+            appiumDriver.hideKeyboard();
+        } catch (Exception e) {
+        }
     }
 }

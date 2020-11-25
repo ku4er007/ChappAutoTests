@@ -44,6 +44,7 @@ public class EditWorkProfile extends BaseTestClass {
         appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys(editEmailWorkName);
         return this;
     }
+
     public EditWorkProfile addWorkProfilePhoto() {
         WebElement addWorkProfilePhotoButton = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@resource-id,'createWorkTvAddPhoto')]"));
         addWorkProfilePhotoButton.click();

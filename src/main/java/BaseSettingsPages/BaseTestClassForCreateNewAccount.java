@@ -14,9 +14,7 @@ import java.net.URL;
 
 public class BaseTestClassForCreateNewAccount {
     AppiumDriver appiumDriver;
-
-
-    //app pages and elements for create new accounts:*********************************************************************************
+    //app pages and elements for create new accounts:*******************************************************************
     public TutorialScreen tutorialScreen;
     public EnterCodePage enterCodePage;
     public SelectCountryPage selectCountryPage;
@@ -26,8 +24,7 @@ public class BaseTestClassForCreateNewAccount {
     public WelcomeToChappPage welcomeToChappPage;
     public CreateWorkProfileForm createWorkProfileForm;
     public AccountManagementPage accountManagementPage;
-
-    //Test Data:**********************************************************************************************************************
+    //Test Data:********************************************************************************************************
     public String firstPersonalName = "Constantine";
     public String lastPersonalName = "Doroshenko";
     public String firstWorkName = "Constantine";
@@ -42,9 +39,6 @@ public class BaseTestClassForCreateNewAccount {
     public String countrySearch = "united states of";
     public String testPhoneNumber = "010101010";
 
-
-
-
     @BeforeClass
     public void setup() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -57,21 +51,18 @@ public class BaseTestClassForCreateNewAccount {
         capabilities.setCapability("appActivity", "o.chappme.chapp.android.ui.host.HostActivity");
         capabilities.setCapability("platformName", "Android");
 
-        //app pages/elements constructors for create new accounts
+        //app pages/elements constructors for create new accounts*******************************************************
         appiumDriver = new AndroidDriver(serverAddress, capabilities);
-
         tutorialScreen = new TutorialScreen(appiumDriver);
         enterCodePage = new EnterCodePage(appiumDriver);
         selectCountryPage = new SelectCountryPage(appiumDriver);
         startPage = new StartPage(appiumDriver);
-
         chatListPage = new ChatListPage(appiumDriver);
         createPersonalProfileForm = new CreatePersonalProfileForm(appiumDriver);
         welcomeToChappPage = new WelcomeToChappPage(appiumDriver);
         createWorkProfileForm = new CreateWorkProfileForm(appiumDriver);
         accountManagementPage = new AccountManagementPage(appiumDriver);
-
-        //login app process for create new account
+        //login app process for create new account**********************************************************************
         startPage.clickOnStartMessagingButton();
         startPage.waitForPageLoad();
         startPage.clickOnSelectCountryButton();
@@ -90,6 +81,5 @@ public class BaseTestClassForCreateNewAccount {
         enterCodePage.waitForPageLoad();
         enterCodePage.hideKeyBoard();
         enterCodePage.clickOnConfirmButton();
-
     }
 }

@@ -54,7 +54,7 @@ public class ChatListPage extends BaseTestClass {
         return chatPagePlaceHolder.isDisplayed();
     }
 
-    public boolean checkChatsPageTitle(){
+    public boolean checkChatsPageTitle() {
         WebElement chatPageTitle = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Chats')]"));
         return chatPageTitle.isDisplayed();
     }
