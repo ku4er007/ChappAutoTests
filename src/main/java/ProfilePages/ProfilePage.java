@@ -31,12 +31,12 @@ public class ProfilePage extends BaseTestClass {
     }
 
     public boolean checkNewProfileName() {
-        WebElement newProfileName = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Константин Дорошенко')]"));
+        WebElement newProfileName = appiumDriver.findElement(newFullPersonalName);
         return newProfileName.isDisplayed();
     }
 
     public boolean checkNewProfileNameWithoutLastName() {
-        WebElement newProfileNameWithoutLastName = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Константин')]"));
+        WebElement newProfileNameWithoutLastName = appiumDriver.findElement(newPersonalNameWithoutLastName);
         return newProfileNameWithoutLastName.isDisplayed();
     }
 
@@ -47,17 +47,17 @@ public class ProfilePage extends BaseTestClass {
     }
 
     public boolean checkNewWorkProfileName() {
-        WebElement newWorkProfileName = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Constantine Doroshenko WORK')]"));
+        WebElement newWorkProfileName = appiumDriver.findElement(newFullWorkName);
         return newWorkProfileName.isDisplayed();
     }
 
     public boolean checkNewCompanyAndTitle() {
-        WebElement newCompanyAndTitle = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Good specialist at The MindStudios')]"));
+        WebElement newCompanyAndTitle = appiumDriver.findElement(newWorkCompanyNameAndNewTitle);
         return newCompanyAndTitle.isDisplayed();
     }
 
     public boolean checkNewEmail() {
-        WebElement newEmail = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'k.doroshenko@themindstudios.com')]"));
+        WebElement newEmail = appiumDriver.findElement(newWorkEmail);
         return newEmail.isDisplayed();
     }
 
@@ -77,7 +77,6 @@ public class ProfilePage extends BaseTestClass {
         WebElement closedTermsButton = appiumDriver.findElement(By.xpath("//android.widget.ImageButton[contains(@resource-id,'close_button')]"));
         closedTermsButton.click();
         return this;
-
 
     }
 

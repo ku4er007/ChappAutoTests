@@ -1,13 +1,12 @@
 package OnboardingPages;
-import BaseSettingsPages.BaseTestClass;
+import BaseSettingsPages.BaseTestClassForCreateNewAccount;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class StartPage extends BaseTestClass {
+public class StartPage extends BaseTestClassForCreateNewAccount {
     public StartPage(AppiumDriver appiumDriver){
         this.appiumDriver = appiumDriver;
 
@@ -31,7 +30,7 @@ public class StartPage extends BaseTestClass {
     }
 
     public StartPage enterPhoneNumber() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'inputPhoneEtInput')]")).sendKeys("010101010");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'inputPhoneEtInput')]")).sendKeys(testPhoneNumber);
         return this;
     }
 

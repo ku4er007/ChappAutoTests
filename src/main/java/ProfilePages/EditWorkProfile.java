@@ -1,7 +1,6 @@
 package ProfilePages;
 
 import BaseSettingsPages.BaseTestClass;
-import OnboardingPages.CreateWorkProfileForm;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,28 +20,28 @@ public class EditWorkProfile extends BaseTestClass {
     }
 
     public EditWorkProfile changeFirstName() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtFirstName')]")).sendKeys("Constantine");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtFirstName')]")).sendKeys(editFirstWorkName);
         return this;
     }
 
     public EditWorkProfile changeLastName() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtLastName')]")).sendKeys("Doroshenko WORK");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtLastName')]")).sendKeys(editLastWorkName);
         return this;
     }
 
     public EditWorkProfile changeCompanyName() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtCompany')]")).sendKeys("The MindStudios");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtCompany')]")).sendKeys(editCompanyWorkName);
         return this;
     }
 
     public EditWorkProfile changeTitle() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtTitle')]")).sendKeys("Good specialist");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtTitle')]")).sendKeys(editTitleWorkName);
         return this;
 
     }
 
     public EditWorkProfile changeEmail() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys("k.doroshenko@themindstudios.com");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys(editEmailWorkName);
         return this;
     }
     public EditWorkProfile addWorkProfilePhoto() {
@@ -77,7 +76,7 @@ public class EditWorkProfile extends BaseTestClass {
     }
 
     public EditWorkProfile enterInvalidEmail1() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys("k.doro");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys(editInvalidEmailWorkName1);
         return this;
 
     }
@@ -88,13 +87,13 @@ public class EditWorkProfile extends BaseTestClass {
     }
 
     public EditWorkProfile enterInvalidEmail2() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys("k.doroshenko@the");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys(editInvalidEmailWorkName2);
         return this;
 
     }
 
     public EditWorkProfile enterInvalidEmail3() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys("k.doroshenko@themindstudios.c");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createWorkEtEmail')]")).sendKeys(editInvalidEmailWorkName3);
         return this;
 
     }

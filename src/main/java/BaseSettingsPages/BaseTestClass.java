@@ -12,6 +12,7 @@ import ProfilePages.*;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -20,7 +21,7 @@ import java.net.URL;
 public abstract class BaseTestClass {
     AppiumDriver appiumDriver;
 
-    //all app pages and elements
+    //all app pages and elements:****************************************************************************************************
     public ContactsPage contactsPage;
     public BottomBar bottomBar;
     public TutorialScreen tutorialScreen;
@@ -42,9 +43,58 @@ public abstract class BaseTestClass {
     public NotificationPage notificationPage;
     public GroupChat groupChat;
 
+    //Test Data:**********************************************************************************************************************
+    public String personalTextMessage = "first Message text TEST TEST tEST";
+    public By checkPersonalTextMessage = By.xpath("//android.widget.TextView[contains(@text,'first Message text TEST TEST tEST')]");
+    public String workTextMessage = "Work Work Work Work Work Message";
+    public By checkWorkTextMessage = By.xpath("//android.widget.TextView[contains(@text,'Work Work Work Work Work Message')]");
+    public By firstGroupMember = By.xpath("//android.widget.TextView[contains(@text,'Pixel 3a XL')]");
+    public By secondGroupMember = By.xpath("//android.widget.TextView[contains(@text,'Samsung J7')]");
+    public By thirdGroupMember = By.xpath("//android.widget.TextView[contains(@text,'Maks Shvec')]");
+    public By fourGroupMember = By.xpath("//android.widget.TextView[contains(@text,'Айфон Х')]");
+    public String personalGroupName = "My own Group";
+    public String personalGroupDescription = "Description of My Own Test Group chat. Welcome!!!";
+    public String searchQuery = "Const";
+    public String editFirstPersonalName = "Константин";
+    public String editLastPersonalName = "Дорошенко";
+    public By newFullPersonalName = By.xpath("//android.widget.TextView[contains(@text,'Константин Дорошенко')]");
+    public By newPersonalNameWithoutLastName = By.xpath("//android.widget.TextView[contains(@text,'Константин')]");
+    public String editFirstWorkName = "Constantine";
+    public String editLastWorkName = "Doroshenko WORK";
+    public String editCompanyWorkName = "The MindStudios";
+    public String editTitleWorkName = "Good specialist";
+    public String editEmailWorkName = "k.doroshenko@themindstudios.com";
+    public By newFullWorkName = By.xpath("//android.widget.TextView[contains(@text,'Constantine Doroshenko WORK')]");
+    public By newWorkCompanyNameAndNewTitle = By.xpath("//android.widget.TextView[contains(@text,'Good specialist at The MindStudios')]");
+    public By newWorkEmail = By.xpath("//android.widget.TextView[contains(@text,'k.doroshenko@themindstudios.com')]");
+    public String editInvalidEmailWorkName1 = "k.doro";
+    public String editInvalidEmailWorkName2 = "k.doroshenko@the";
+    public String editInvalidEmailWorkName3 = "k.doroshenko@themindstudios.c";
+    public String startMuteHourData = "12";
+    public String startMuteMinuteData = "30";
+    public String endMuteHourData = "17";
+    public String endMuteMinuteData = "40";
+    public By monday = By.xpath("//android.widget.CheckedTextView[contains(@text,'Monday')]");
+    public By tuesday = By.xpath("//android.widget.CheckedTextView[contains(@text,'Tuesday')]");
+    public By friday = By.xpath("//android.widget.CheckedTextView[contains(@text,'Friday')]");
+    public By sunday = By.xpath("//android.widget.CheckedTextView[contains(@text,'Sunday')]");
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @BeforeClass
+
     public void setup() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3a XL");

@@ -25,26 +25,26 @@ public class GroupChat extends BaseTestClass {
     }
 
     public GroupChat selectPersonalContact1() {
-        WebElement firstPerson = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Pixel 3a XL')]"));
+        WebElement firstPerson = appiumDriver.findElement(firstGroupMember);
         firstPerson.click();
         return this;
 
     }
 
     public GroupChat selectPersonalContact2() {
-        WebElement secondPerson = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Samsung J7')]"));
+        WebElement secondPerson = appiumDriver.findElement(secondGroupMember);
         secondPerson.click();
         return this;
     }
 
     public GroupChat selectPersonalContact3() {
-        WebElement thirdPerson = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Maks Shvec')]"));
+        WebElement thirdPerson = appiumDriver.findElement(thirdGroupMember);
         thirdPerson.click();
         return this;
     }
 
     public GroupChat selectPersonalContact4() {
-        WebElement fourPerson = appiumDriver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Айфон Х')]"));
+        WebElement fourPerson = appiumDriver.findElement(fourGroupMember);
         fourPerson.click();
         return this;
     }
@@ -74,12 +74,12 @@ public class GroupChat extends BaseTestClass {
     }
 
     public GroupChat enterGroupName() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createGroupNameEt')]")).sendKeys("My own Group");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createGroupNameEt')]")).sendKeys(personalGroupName);
         return this;
     }
 
     public GroupChat enterGroupDescription() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createGroupDescriptionEt')]")).sendKeys("Description of My Own Test Group chat. Welcome!!!");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createGroupDescriptionEt')]")).sendKeys(personalGroupDescription);
         return this;
     }
 

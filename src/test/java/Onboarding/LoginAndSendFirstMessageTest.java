@@ -1,3 +1,5 @@
+package Onboarding;
+
 import BaseSettingsPages.*;
 import org.testng.annotations.Test;
 

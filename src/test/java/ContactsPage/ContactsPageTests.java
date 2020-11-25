@@ -1,3 +1,5 @@
+package ContactsPage;
+
 import BaseSettingsPages.*;
 import org.testng.annotations.Test;
 

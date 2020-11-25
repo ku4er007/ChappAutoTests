@@ -69,12 +69,12 @@ public class MuteProfilePage extends BaseTestClass {
     }
 
     public MuteProfilePage enterStartHourData() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'input_hour')]")).sendKeys("12");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'input_hour')]")).sendKeys(startMuteHourData);
         return this;
     }
 
     public MuteProfilePage enterStartMinuteData() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'input_minute')]")).sendKeys("30");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'input_minute')]")).sendKeys(startMuteMinuteData);
         return this;
     }
 
@@ -91,12 +91,12 @@ public class MuteProfilePage extends BaseTestClass {
     }
 
     public MuteProfilePage enterEndHourData() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'input_hour')]")).sendKeys("17");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'input_hour')]")).sendKeys(endMuteHourData);
         return this;
     }
 
     public MuteProfilePage enterEndMinuteData() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'input_minute')]")).sendKeys("00");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'input_minute')]")).sendKeys(endMuteMinuteData);
         return this;
     }
 
@@ -107,26 +107,26 @@ public class MuteProfilePage extends BaseTestClass {
     }
 
     public MuteProfilePage selectMonday() {
-        WebElement mondayCheckbox = appiumDriver.findElement(By.xpath("//android.widget.CheckedTextView[contains(@text,'Monday')]"));
+        WebElement mondayCheckbox = appiumDriver.findElement(monday);
         mondayCheckbox.click();
         return this;
 
     }
 
     public MuteProfilePage selectTuesday() {
-        WebElement tuesdayCheckbox = appiumDriver.findElement(By.xpath("//android.widget.CheckedTextView[contains(@text,'Tuesday')]"));
+        WebElement tuesdayCheckbox = appiumDriver.findElement(tuesday);
         tuesdayCheckbox.click();
         return this;
     }
 
     public MuteProfilePage selectFriday() {
-        WebElement fridayCheckbox = appiumDriver.findElement(By.xpath("//android.widget.CheckedTextView[contains(@text,'Friday')]"));
+        WebElement fridayCheckbox = appiumDriver.findElement(friday);
         fridayCheckbox.click();
         return this;
     }
 
     public MuteProfilePage selectSunday() {
-        WebElement sundayCheckbox = appiumDriver.findElement(By.xpath("//android.widget.CheckedTextView[contains(@text,'Sunday')]"));
+        WebElement sundayCheckbox = appiumDriver.findElement(sunday);
         sundayCheckbox.click();
         return this;
     }

@@ -1,3 +1,5 @@
+package Onboarding;
+
 import BaseSettingsPages.BaseTestClass;
 import BaseSettingsPages.BaseTestClassForCreateNewAccount;
 import org.testng.annotations.Test;

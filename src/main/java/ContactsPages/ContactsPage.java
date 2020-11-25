@@ -49,7 +49,7 @@ public class ContactsPage extends BaseTestClass {
     }
 
     public ContactsPage enterSearchQuery() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'searchContactsEt')]")).sendKeys("Const");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'searchContactsEt')]")).sendKeys(searchQuery);
         return this;
     }
 

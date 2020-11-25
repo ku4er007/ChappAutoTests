@@ -1,13 +1,14 @@
 package OnboardingPages;
 
 import BaseSettingsPages.BaseTestClass;
+import BaseSettingsPages.BaseTestClassForCreateNewAccount;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class CreatePersonalProfileForm extends BaseTestClass {
+public class CreatePersonalProfileForm extends BaseTestClassForCreateNewAccount {
 
     public CreatePersonalProfileForm(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
@@ -20,12 +21,12 @@ public class CreatePersonalProfileForm extends BaseTestClass {
     }
 
     public CreatePersonalProfileForm enterFirstName() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtFirstName')]")).sendKeys("Constantine");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtFirstName')]")).sendKeys(firstPersonalName);
         return this;
     }
 
     public CreatePersonalProfileForm enterLastName() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtLastName')]")).sendKeys("Doroshenko");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtLastName')]")).sendKeys(lastPersonalName);
         return this;
     }
 

@@ -1,13 +1,14 @@
 package OnboardingPages;
 
 import BaseSettingsPages.BaseTestClass;
+import BaseSettingsPages.BaseTestClassForCreateNewAccount;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class SelectCountryPage extends BaseTestClass {
+public class SelectCountryPage extends BaseTestClassForCreateNewAccount {
 
     public SelectCountryPage(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
@@ -26,7 +27,7 @@ public class SelectCountryPage extends BaseTestClass {
     }
 
     public void findAndSendCountry() {
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'search_src_text')]")).sendKeys("united states of");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'search_src_text')]")).sendKeys(countrySearch);
     }
 
     public void clickOnAmericaButtonFromList() {

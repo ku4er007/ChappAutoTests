@@ -1,12 +1,13 @@
 package ProfilePages;
 
+import BaseSettingsPages.BaseTestClass;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
 
-public class EditPersonalProfile {
+public class EditPersonalProfile extends BaseTestClass {
     public EditPersonalProfile(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
     }
@@ -24,13 +25,13 @@ public class EditPersonalProfile {
 
     public EditPersonalProfile changeFirstName() {
         appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtFirstName')]")).clear();
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtFirstName')]")).sendKeys("Константин");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtFirstName')]")).sendKeys(editFirstPersonalName);
         return this;
     }
 
     public EditPersonalProfile changeLastName() {
         appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtLastName')]")).clear();
-        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtLastName')]")).sendKeys("Дорошенко");
+        appiumDriver.findElement(By.xpath("//android.widget.EditText[contains(@resource-id,'createPersonalEtLastName')]")).sendKeys(editLastPersonalName);
         return this;
     }
 

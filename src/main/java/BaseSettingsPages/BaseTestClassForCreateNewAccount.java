@@ -15,19 +15,34 @@ import java.net.URL;
 public class BaseTestClassForCreateNewAccount {
     AppiumDriver appiumDriver;
 
-    //app pages and elements for create new accounts
 
+    //app pages and elements for create new accounts:*********************************************************************************
     public TutorialScreen tutorialScreen;
     public EnterCodePage enterCodePage;
     public SelectCountryPage selectCountryPage;
     public StartPage startPage;
-
-
     public ChatListPage chatListPage;
     public CreatePersonalProfileForm createPersonalProfileForm;
     public WelcomeToChappPage welcomeToChappPage;
     public CreateWorkProfileForm createWorkProfileForm;
     public AccountManagementPage accountManagementPage;
+
+    //Test Data:**********************************************************************************************************************
+    public String firstPersonalName = "Constantine";
+    public String lastPersonalName = "Doroshenko";
+    public String firstWorkName = "Constantine";
+    public String lastWorkName = "Doroshenko WORK";
+    public String companyWorkName = "The MindStudios";
+    public String titleWorkName = "Good specialist";
+    public String emailWork = "k.doroshenko@themindstudios.com";
+    public String firstInputSmsCode = "10";
+    public String secondInputSmsCode = "10";
+    public String thirdInputSmsCode = "10";
+    public String fourInputSmsCode = "10";
+    public String countrySearch = "united states of";
+    public String testPhoneNumber = "010101010";
+
+
 
 
     @BeforeClass
